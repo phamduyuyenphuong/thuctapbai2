@@ -1,0 +1,16 @@
+3
+cau1:mot con vit co bao nhieu chan?
+A: 3 chan
+B: 4 chan
+C: 2 chan
+C
+cau2:mot con bo co bao nhieu chan?
+A: 3 chan
+B: 4 chan
+C: 2 chan
+B
+cau3:mot con meo co bao nhieu chan?
+A: 3 chan
+B: 4 chan
+C: 2 chan
+B
