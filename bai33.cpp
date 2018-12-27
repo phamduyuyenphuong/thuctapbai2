@@ -5,7 +5,7 @@
 //su dong vong lap for
 // nhap cau tra loi theo quy dinh
 // ham kiem tra dap an KiemTra(string a,string)
-//tao 2 struct de luu diem
+//tao struct bode
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -58,7 +58,7 @@ void LayDe(){
 			bd1.DA = s;
 			cout<<"nhap dap an o day";
 			getline(cin,DA);
-			diem += KiemTra(bd1.DA,DA);
+			diem += KiemTra(bd1.DA,DA);// cong diem tung cau hoi
 				
 			dscau.push_back(bd1);//sau khi xuat push_back gan vao vector
 		}
