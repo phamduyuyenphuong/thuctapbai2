@@ -78,20 +78,20 @@ void LayDe(){
 }
 
 
-int KiemTra (string A,string B){
+int KiemTra (string A,string B){//ham kiem tra chuoi dap an va dap an cua nguoi choi
 	if(A.compare(B)==0)//ham so sanh chuoi string
 	 return 2;
 	else
 		return 0; 
 	}
-void LuuDiem(string a,int diem){
+void LuuDiem(string a,int diem){// ham luu diem cua tung nguoi choi
 	fstream f;
 	f.open("luudiem.txt", ios::out | ios::app);// mo file luudiem de  luu diem nguoi choi (ios::app luu lien tiep khong bi ghi de)
 	f << a << "\t" << diem << "\n";// luu a la ten, diem
 	f.close();
 }
 
-void Xuat(){
+void Xuat(){// ham xuat diem va ten cau cac nguoi choi
 	string s;
 		ifstream f3("luudiem.txt");
 		// vong lap
