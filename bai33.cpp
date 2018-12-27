@@ -18,19 +18,19 @@ typedef struct BoDe{// khai bao cau truc 1 cau hoi
 	string A,B,C;
 	string DA;
 } BoDe;
-typedef struct Nguoi{
-	int diem;
-	string ten;
-}Nguoi;
+
 void LayDe();
 void DocDe();
+int KiemTra (string A,string B);
+void LuuDiem(string a,int diem);
+void Xuat();
 vector <BoDe> dscau;
 int main(){
 	LayDe();
 
 }
 void LayDe(){
-			
+		int diem =0;	
 		ifstream f("de1.txt");
 		string s,DA;
 		BoDe bd1;
@@ -54,10 +54,51 @@ void LayDe(){
 			bd1.C=s;
 			cout<<s<<endl;
 			getline(f,s);
-			dscau[i].DA;
+			//dscau[i].DA;
+			bd1.DA = s;
 			cout<<"nhap dap an o day";
 			getline(cin,DA);
-			dscau.push_back(bd1);//push_back gan vao vector
+			diem += KiemTra(bd1.DA,DA);
+				
+			dscau.push_back(bd1);//sau khi xuat push_back gan vao vector
 		}
+		f.close();
+		//goi file luu diem
+		string ten;
+		cout <<  endl<< "nhap ten de luu diem: " ;
+		getline(cin, ten);// nhap ten nguoi choi
+		LuuDiem(ten,diem);
+		
+		cout<<" nhap 1 de xem diem nguoi choi"<<endl;
+		int m;
+		cin>>m;
+		if( m== 1)
+			Xuat();	
+		
 }
 
+
+int KiemTra (string A,string B){
+	if(A.compare(B)==0)//ham so sanh chuoi string
+	 return 2;
+	else
+		return 0; 
+	}
+void LuuDiem(string a,int diem){
+	fstream f;
+	f.open("luudiem.txt", ios::out | ios::app);// mo file luudiem de  luu diem nguoi choi (ios::app luu lien tiep khong bi ghi de)
+	f << a << "\t" << diem << "\n";// luu a la ten, diem
+	f.close();
+}
+
+void Xuat(){
+	string s;
+		ifstream f3("luudiem.txt");
+		// vong lap
+		getline(f3, s);// lay ten va diem tu file luudiem
+		do{
+			cout << s << endl;
+			getline(f3, s);
+		}while(s.compare("") != 0);// neu dong cuoi cung trong file txt khong co gi het thi ket thuc viet doc
+		f3.close();
+}
