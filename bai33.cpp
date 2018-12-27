@@ -1,0 +1,63 @@
+//ham doc de()
+// chon de lam
+//docde() ham doc de tu file txt
+// doc dong 1
+//su dong vong lap for
+// nhap cau tra loi theo quy dinh
+// ham kiem tra dap an KiemTra(string a,string)
+//tao 2 struct de luu diem
+#include<iostream>
+#include<fstream>
+#include<stdlib.h>
+#include<string.h>
+#include <vector>
+using namespace std;
+typedef struct BoDe{// khai bao cau truc 1 cau hoi
+	
+	string CauHoi;
+	string A,B,C;
+	string DA;
+} BoDe;
+typedef struct Nguoi{
+	int diem;
+	string ten;
+}Nguoi;
+void LayDe();
+void DocDe();
+vector <BoDe> dscau;
+int main(){
+	LayDe();
+
+}
+void LayDe(){
+			
+		ifstream f("de1.txt");
+		string s,DA;
+		BoDe bd1;
+		int n; // so luong cau hoi
+		getline(f,s); // luu bien vao bien s (kieu string)
+		n = atoi(s.c_str()); // doi tu string sang kieu int
+		for(int i = 0; i < n; i++)
+		{
+			getline(f,s); bd1.CauHoi=s;
+			cout<<s<<endl;// xuat dong cau hoi
+			getline(f,s);//lay dong dap an A
+			//dscau[i].A;
+			bd1.A=s;
+			cout<<s<<endl;
+			getline(f,s);
+			//dscau[i].B;
+			bd1.B=s;
+			cout<<s<<endl;
+			getline(f,s);
+			//dscau[i].C;
+			bd1.C=s;
+			cout<<s<<endl;
+			getline(f,s);
+			dscau[i].DA;
+			cout<<"nhap dap an o day";
+			getline(cin,DA);
+			dscau.push_back(bd1);//push_back gan vao vector
+		}
+}
+
