@@ -91,7 +91,7 @@ void LuuDiem(string a,int diem){// ham luu diem cua tung nguoi choi
 	f.close();
 }
 
-void Xuat(){// ham xuat diem va ten cau cac nguoi choi
+void Xuat(){// ham xuat diem va ten cua cac nguoi choi
 	string s;
 		ifstream f3("luudiem.txt");
 		// vong lap
