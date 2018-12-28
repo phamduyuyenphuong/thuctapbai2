@@ -1,11 +1,10 @@
-//ham doc de()
-// chon de lam
-//docde() ham doc de tu file txt
-// doc dong 1
-//su dong vong lap for
-// nhap cau tra loi theo quy dinh
-// ham kiem tra dap an KiemTra(string a,string)
-//tao struct bode
+/*ham doc de()
+chon de lam
+docde() ham doc de tu file txt
+doc dong 1
+su dong vong lap for
+nhap cau tra loi theo quy dinh
+tao struct bode*/
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
